@@ -144,7 +144,7 @@ class WGraphAlgoTest {
         weighted_graph_algorithms graphAlgo = new WGraph_Algo();
         graphAlgo.init(graphDsTest);
         List<node_info> path = graphAlgo.shortestPath(1, 3);
-        functionForTests.printListOfPath(path,1,3);
+       
         Assertions.assertEquals(4, path.size(), "Size of the shortest path should be be 4");
         assertEquals(3.5, graphAlgo.shortestPathDist(1,3),"Should be 3.5");
         graphDsTest.connect(0, 1, 11);
@@ -152,7 +152,7 @@ class WGraphAlgoTest {
         graphAlgo2.init(graphDsTest);
         List<node_info> newPath = graphAlgo2.shortestPath(1, 3);
         Assertions.assertEquals(2, newPath.size(), "Size of the shortest path should be be 2");
-        functionForTests.printListOfPath(newPath,1,3);
+      
         assertEquals(5.5, graphAlgo2.shortestPathDist(1,3),"Should be 5.5");
     }
     @Test
